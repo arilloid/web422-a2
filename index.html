@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap minified css file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- main.css -->
+    <link rel="stylesheet" href="./css/main.css">
+    
+    <title>Movies Page</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Arina Kolodeznikova - Movie Data</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <form class="d-flex" id="searchForm">
+              <input class="form-control me-2" type="search" placeholder="Title (case sensitive)" aria-label="Search" id="title">
+              <button class="btn btn-outline-success searchbar-btn" type="submit">Search</button>
+              <button class="btn btn-outline-danger searchbar-btn" type="button" id="clearForm">Clear</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <!-- movie table -->
+    <div class="container" id="moviesTable">
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Title</th>
+                        <th>Plot</th>
+                        <th>Rating</th>
+                        <th>Run Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- pagination -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous" id="previous-page">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#" id="current-page"></a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next" id="next-page">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+    </nav>
+
+    <!-- modal -->
+    <div class="modal fade" tabindex="-1" id="detailsModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"></div>
+          </div>
+        </div>
+    </div>
+
+    <!-- bootstrap minified js file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- main.js -->
+    <script src="./js/main.js"></script>     
+</body>
+</html>
