@@ -5,6 +5,7 @@
 *  (including web sites) or distributed to other students.
 * 
 *  Name: Arina Kolodeznikova Student ID: 145924213 Date: 02/06/2023
+*  Cyclic Link: https://alive-ox-gear.cyclic.app/
 *
 ********************************************************************************/ 
 
@@ -14,7 +15,6 @@ const perPage = 10;
 function loadMovieData(title = null) {
     fetchData(title)
       .then(res => {
-        console.log(res.data);
         generateTable(res.data);
       })
       .catch(err => {
@@ -74,7 +74,6 @@ function addClickEvents(rows) {
             fetch(`https://plum-splendid-jellyfish.cyclic.app/api/movies/${row.getAttribute("data-id")}`)
                 .then(res => { return res.json();})
                 .then(movie => {
-                    console.log(movie);
                     generateModal(movie.data);
                 })
                 .catch(err => {
