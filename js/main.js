@@ -26,14 +26,16 @@ function fetchData(title = null) {
     return new Promise((resolve, reject) => {
         let pagination = document.querySelector('.pagination');
         let containsClass = pagination.classList.contains('d-none');
-        let url = `https://plum-splendid-jellyfish.cyclic.app/api/movies?page=${page}&perPage=${perPage}`;
+        let url = ``;
 
         if (title) {
-            url += `&title=${title}`;
+            page = 1;
+            url = `https://plum-splendid-jellyfish.cyclic.app/api/movies?page=${page}&perPage=${perPage}&title=${title}`;
             if (!containsClass) {
                 pagination.classList.add('d-none');
             }
         } else {
+            url = `https://plum-splendid-jellyfish.cyclic.app/api/movies?page=${page}&perPage=${perPage}`;
             if (containsClass) {
                 pagination.classList.remove('d-none');
             }
